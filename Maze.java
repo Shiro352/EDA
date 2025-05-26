@@ -19,9 +19,9 @@ public class Maze {
         StringBuilder x = new StringBuilder();
         for (int i = 0; i < rows; i++){
             for (int j = 0; j < cols; j++){
-                if (data[i][i]==WALL){
+                if (data[i][j]==WALL){
                     x.append('#');
-                }else if (data[i][i]==EMPTY){
+                }else if (data[i][j]==EMPTY){
                     x.append(' ');
                 }else{
                     x.append('?');
