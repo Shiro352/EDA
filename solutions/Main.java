@@ -1,5 +1,10 @@
+package solutions;
 // Main.java
 import java.util.*;
+
+import adt.MazeSolver;
+import ds.Maze;
+import ds.MazeSolverDC;
 
 public class Main {
     public static void main(String[] args) {

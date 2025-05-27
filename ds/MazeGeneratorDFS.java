@@ -1,5 +1,8 @@
+package ds;
 // MazeGeneratorDFS.java
 import java.util.*;
+
+import adt.MazeGenerator;
 
 public class MazeGeneratorDFS implements MazeGenerator {
     private static final int[] dRow = {-1, 0, 1, 0};

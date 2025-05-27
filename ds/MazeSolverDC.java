@@ -1,5 +1,8 @@
+package ds;
 // MazeSolverDC.java
 import java.util.*;
+
+import adt.MazeSolver;
 
 public class MazeSolverDC implements MazeSolver {
     @Override
