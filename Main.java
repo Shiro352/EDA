@@ -1,16 +1,17 @@
+// Main.java
+import java.util.*;
+
 public class Main {
     public static void main(String[] args) {
-        // Crear un laberinto de 5x5
-        Maze maze = new Maze(5, 5);
+        int logicalRows=3, logicalCols=3;
+        Maze maze = new Maze(logicalRows, logicalCols);
+        MazeSolver solver = new MazeSolverDC();
 
-        // Crear un camino vacío en forma de cruz
-        maze.data[2][1] = Maze.EMPTY;
-        maze.data[2][2] = Maze.EMPTY;
-        maze.data[2][3] = Maze.EMPTY;
-        maze.data[1][2] = Maze.EMPTY;
-        maze.data[3][2] = Maze.EMPTY;
+        int[] origin={1,1};
+        int[] destination={maze.rows-2, maze.cols-2};
 
-        // Imprimir el laberinto
-        System.out.println(maze.toString());
+        List<int[]> path = solver.solve(maze, origin, destination);
+        if(path==null) System.out.println("No se encontró un camino.");
+        System.out.println(maze);
     }
 }
